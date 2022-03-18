@@ -28,7 +28,7 @@ struct CircleView: View {
                 .padding(.vertical, 50)
             Button ("Animate me!") {
                 isScalable = true
-                vm.setUpTimer()
+                vm.startTimer()
             }
             Spacer()
         }
