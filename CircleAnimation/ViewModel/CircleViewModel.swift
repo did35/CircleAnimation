@@ -10,14 +10,14 @@ import Combine
 
 class CircleViewModel: ObservableObject {
     
-    @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @Published var publisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var cancellables: AnyCancellable?
     
-    func startTimer() {
-        timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    func startPublisher() {
+        self.publisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     }
     
-    func cancelTimer() {
+    func cancelPublisher() {
         cancellables?.cancel()
     }
 }

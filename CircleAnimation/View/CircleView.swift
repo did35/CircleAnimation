@@ -21,14 +21,14 @@ struct CircleView: View {
                 .frame(width: 200, height: 200)
                 .foregroundColor(isScalable ? .green : .red)
                 .animation(.linear(duration: 1), value: isScalable)
-                .onReceive(vm.timer) { _ in
+                .onReceive(vm.publisher) { _ in
                     isScalable = false
-                    vm.cancelTimer()
+                    vm.cancelPublisher()
                 }
                 .padding(.vertical, 50)
             Button ("Animate me!") {
                 isScalable = true
-                vm.startTimer()
+                vm.startPublisher()
             }
             Spacer()
         }
