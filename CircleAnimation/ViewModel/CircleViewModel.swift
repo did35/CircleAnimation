@@ -13,7 +13,7 @@ class CircleViewModel: ObservableObject {
     @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var cancellables: AnyCancellable?
     
-    func setUpTimer() {
+    func startTimer() {
         timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     }
     
