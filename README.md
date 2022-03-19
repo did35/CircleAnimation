@@ -19,7 +19,7 @@ Compatible with Timers, NotificationCenter, URLSession, all expose the publisher
 ## Modification challenge
 
 - Representing a circle animation of one second with a timer publisher. 
-- The circle shrink to 80% and goes from red to blue, before coming back to its original size and back to red.
+- The circle shrink to 80% and goes from red to green, before coming back to its original size and back to red.
 ## Lessons Learned
 
 - Being exposed to the Combine framework, using publisher/subscriber with Timer.
