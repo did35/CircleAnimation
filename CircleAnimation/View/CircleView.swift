@@ -21,7 +21,7 @@ struct CircleView: View {
                 .frame(width: 200, height: 200)
                 .foregroundColor(isScalable ? .green : .red)
                 .animation(.linear(duration: 1), value: isScalable)
-                .onReceive(vm.publisher) { _ in
+                .onReceive(vm.timerPublisher) { _ in
                     isScalable = false
                     vm.cancelPublisher()
                 }
